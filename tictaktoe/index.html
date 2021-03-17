@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tic Tac Toe game</title>
+    <style>
+        #body{
+            text-align: center;
+        }
+
+        #b1, #b2, #b3, #b4, #b5,  
+        #b6, #b7, #b8, #b9 { 
+        width: 80px; 
+        height: 52px; 
+        margin: auto; 
+        border: 1px solid gray; 
+        border-radius: 6px; 
+        font-size: 30px; 
+        text-align: center; 
+        background-color: aquamarine;
+    } 
+    #print { 
+        font-family: cursive;
+        color: blueviolet;
+        font-size: 20px; 
+    } 
+    #reset { 
+        box-sizing: border-box; 
+        width: 95px; 
+        height: 40px; 
+        border: 1px solid dodgerblue; 
+        margin: auto; 
+        border-radius: 4px; 
+        font-family: fantasy;
+        background-color: dodgerblue; 
+        color: white; 
+        font-size: 20px; 
+        cursor: pointer; 
+    } 
+    h1{
+        font-family: cursive;
+    }
+   
+    </style>
+     <script src="tictaktoe.js"></script>
+</head>
+<body>
+    <div id="body">
+        <h1>TIC TAC TOE</h1>  
+        <br><br> 
+        <!-- 3*3 grid of Boxes -->
+        
+        <input type="text" id="b1" onclick= 
+            "tick_1(); checkforWinning();" readonly> 
+  
+        <input type="text" id="b2" onclick= 
+            "tick_2(); checkforWinning();" readonly> 
+  
+        <input type="text" id="b3" onclick= 
+            "tick_3(); checkforWinning();" readonly> 
+        <br><br> 
+  
+        <input type="text" id="b4" onclick= 
+            "tick_4(); checkforWinning();" readonly> 
+              
+        <input type="text" id="b5" onclick= 
+            "tick_5(); checkforWinning();" readonly> 
+  
+        <input type="text" id="b6" onclick= 
+            "tick_6(); checkforWinning();" readonly> 
+        <br><br> 
+  
+        <input type="text" id="b7" onclick= 
+            "tick_7(); checkforWinning();" readonly> 
+  
+        <input type="text" id="b8" onclick= 
+            "tick_8();checkforWinning();" readonly> 
+  
+        <input type="text" id="b9" onclick= 
+            "tick_9();checkforWinning();" readonly> 
+  
+            <br><br><br> 
+            <button id="reset" onclick="resetGrid()"> 
+                RESET 
+            </button> 
+            <br><br> 
+            <p id="print"></p> 
+    </div>
+</body>
+</html>
