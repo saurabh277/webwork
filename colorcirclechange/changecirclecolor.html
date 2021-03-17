@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>change color</title>
+    <style>
+    div{
+        width: 150px;
+        height: 150px;
+        background-color: blue;
+        border-radius: 50%;
+        border: 1px solid black;
+    }
+    </style>
+</head>
+<body>
+    <div id="div1" onclick="changecolor()"></div>
+    <script>
+        var digit ="0123456789ABCDEF";
+        function returncolor(){
+          low=0;
+          high=15;
+          color ='#';
+          for(i=0;i<6 ;i++){
+              color = color + digit[ Math.floor(Math.random() * (high +1))];
+          }
+          return color;
+        }
+        function changecolor(){
+        element=document.getElementById('div1');
+        color= returncolor();
+        element.style.background=color;
+        //but our tsak is to chnage color randomly -random no generator
+        //Random color generator
+  
+        }
+    </script>
+</body>
+</html>

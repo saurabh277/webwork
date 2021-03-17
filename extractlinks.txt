@@ -1,0 +1,7 @@
+links =document.getElementsByTagName("a") ;
+array=[];
+for(i=0;i<links.length;i++){
+    if(links[i].href.length >1){
+        array.push(links[i].href)
+}
+}

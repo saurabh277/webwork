@@ -1,0 +1,22 @@
+<html>
+<head>
+      <title>Bulb on off</title>
+</head>
+<body>
+  <img id ="bulb1" onclick="bulbonoff()" src ="glow.jpg" style="height:130px; width:100px;"> 
+  <p>Click on bulb to on off</p>
+  <script>
+      function bulbonoff()
+      {
+          var el1=document.getElementById('bulb1');
+          if(el1.src.match("glow")){
+              el1.src="off.jpg";
+          }
+          else{
+              el1.src="glow.jpg";
+          }
+         
+      }
+  </script>
+</body>
+</html>
