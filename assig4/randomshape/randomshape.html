@@ -15,12 +15,13 @@
     }
    h2{
        text-align: center;
+       display: block;
    }
     </style>
 </head>
 <body>
     <h2 id="tim"></h2>
-    <div id="div1" onclick="changecolor()"></div>
+    <div id="div1" onclick="set()"></div>
     <script>
         var digit ="0123456789ABCDEF";
         function returncolor(){
@@ -32,10 +33,19 @@
           }
           return color;
         }
+        function set()
+        {
+            time = 700 + Math.floor(Math.random() * (1200 - 700 +1));
+         setTimeout(function(){
+             changecolor();
+            timeshow.innerText = "Time = " + time;
+         }, time); 
+        }
        
         function changecolor(){    
         element=document.getElementById('div1');
         timeshow=document.getElementById('tim');
+    
         color= returncolor();
         element.style.background=color;
         var num = Math.floor(Math.random() * 100);
@@ -43,10 +53,6 @@
         let height=document.body.scrollHeight - 150, width=document.body.scrollWidth-150;
         element.style.top = Math.floor(Math.random() * height  )+ 'px';
         element.style.left =Math.floor(Math.random() * width ) + 'px';
-        time = 700 + Math.floor(Math.random() * (1200 - 700 +1));
-        setTimeout(function(){
-            timeshow.innerText = "Time = " + time;
-         }, time); 
         }
         
         
